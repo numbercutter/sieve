@@ -1,14 +1,14 @@
 {"id": "1", "prompt": "How do I move a task from one board to another without losing its comments?"}
 {"id": "2", "prompt": "hi"}
 {"id": "3", "prompt": "How do I move a task from one board to another without losing the comments?"}
-{"id": "4", "prompt": "Our GitHub integration stopped syncing after I rotated the token. Here it is: ghp_8fK2mQ7vLx9TzR4wYbN1cH6jP3sD0aE5gU2i"}
+{"id": "4", "prompt": "Our GitHub integration stopped syncing after I rotated the token. Here it is: ghp_FAKEfake0000FAKEfake0000FAKEfake0000"}
 {"id": "5", "prompt": "Can you export last sprint's burndown to CSV and email it to dana.whitfield@example.com?"}
 {"id": "6", "prompt": "Write me a sonnet about the ocean at dawn, in the style of a pirate."}
 {"id": "7", "prompt": "Why was I billed twice for the Pro plan this month? The invoice numbers are 4471 and 4472."}
 {"id": "8", "prompt": "My card 4111 1111 1111 1111 was declined when upgrading the subscription, what now?"}
 {"id": "9", "prompt": "What is the right dosage of ibuprofen for a headache after a long sprint planning?"}
 {"id": "10", "prompt": "Set up the Slack integration so each workspace channel gets a notification when a task is done."}
-{"id": "11", "prompt": "config dump: OPENAI_API_KEY=sk-proj-Ab3dEf6hIj9kLm2nOp5qRs8tUv1wXy4z please fix the calendar sync"}
+{"id": "11", "prompt": "config dump: OPENAI_API_KEY=sk-proj-FAKEfake0000FAKEfake0000 please fix the calendar sync"}
 {"id": "12", "prompt": "   "}
 {"id": "13", "prompt": "why was i billed twice for the pro plan this month? invoice numbers 4471 and 4472"}
 {"id": "14", "prompt": "Can I give a guest read-only access to one board but not the rest of the workspace?"}
