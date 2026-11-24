@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-label="sieve: Only the good stuff goes to the cloud.">
+  <rect width="1280" height="640" fill="#083344"/>
+  <g transform="translate(120 224) scale(3)">
+    <path d="M14 0 H46 L64 18 V50 Q64 64 50 64 H14 Q0 64 0 50 V14 Q0 0 14 0 Z" fill="#083344" stroke="#9CADB4" stroke-opacity="0.45" stroke-width="1"/>
+    <circle cx="18" cy="19" r="4" fill="#FDE047"/><circle cx="32" cy="19" r="4" fill="#FDE047"/><circle cx="46" cy="19" r="4" fill="#FDE047"/>
+    <circle cx="25" cy="32" r="4" fill="#FDE047"/><circle cx="39" cy="32" r="4" fill="#FDE047"/>
+    <circle cx="32" cy="45.5" r="5" fill="#FDE047"/>
+  </g>
+  <text x="392" y="330" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-weight="700" font-size="120" fill="#FDE047">sieve</text>
+  <text x="396" y="398" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="30" fill="#9CADB4">Only the good stuff goes to the cloud.</text>
+  <text x="1240" y="604" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" fill="#9CADB4" fill-opacity="0.7">a numbercutter instrument</text>
+</svg>

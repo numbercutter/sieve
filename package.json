@@ -1,0 +1,15 @@
+{
+  "name": "@numbercutter/sieve",
+  "version": "0.1.0",
+  "description": "Cheap deterministic checks, and an optional local model, before paid model calls.",
+  "type": "module",
+  "license": "MIT",
+  "bin": { "sieve": "src/cli.ts" },
+  "exports": "./src/index.ts",
+  "files": ["src", "assets", "sieve.config.json", "README.md", "LICENSE"],
+  "scripts": {
+    "example": "bun src/cli.ts run examples/prompts.jsonl --mock"
+  },
+  "engines": { "bun": ">=1.1" },
+  "repository": { "type": "git", "url": "https://github.com/numbercutter/sieve" }
+}

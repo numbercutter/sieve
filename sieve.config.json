@@ -1,0 +1,16 @@
+{
+  "minChars": 12,
+  "minWords": 3,
+  "duplicateThreshold": 0.75,
+  "rules": [
+    { "name": "medical dosing", "match": ["dosage", "overdose", "/how many (mg|milligrams)/i"], "action": "review" },
+    { "name": "weapons", "match": ["explosive", "untraceable gun"], "action": "block" },
+    { "name": "competitor data", "match": ["scrape their customer list"], "action": "block" }
+  ],
+  "scope": {
+    "description": "a support assistant for a project-management app: tasks, boards, sprints, billing, integrations and account settings",
+    "keywords": ["task", "board", "sprint", "invoice", "billed", "billing", "plan", "integration", "slack", "github", "account", "password", "export", "csv", "workspace", "notification", "calendar", "subscription"]
+  },
+  "local": { "model": "llama3.2" },
+  "pricing": { "inputPerMTok": 3, "outputPerMTok": 15, "expectedOutputTokens": 500 }
+}
