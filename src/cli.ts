@@ -1,17 +1,26 @@
 #!/usr/bin/env bun
 import { DEFAULTS, createSieve, loadConfig, mock, ollama, type Config, type LocalModel, type Result } from "./index.ts";
+import { serve } from "./serve.ts";
+import { render, summarize } from "./report.ts";
 
 const USAGE = `sieve — only the good stuff goes to the cloud
 
 usage:
   sieve run <prompts.jsonl>   route every prompt and print a table
   sieve check "<prompt>"      route one prompt, print JSON
+  sieve serve                 OpenAI-compatible proxy on POST /v1/chat/completions
+  sieve report <log.jsonl>    summarise a decision log  [--by hour|day|week] [--json]
 
 options:
   --config <path>             rules file (default ./sieve.config.json)
   --mock                      offline stand-in for the local model
   --ollama [model]            ask a local Ollama model (OLLAMA_URL, default http://localhost:11434)
-  --json                      print one JSON result per line instead of a table`;
+  --json                      print one JSON result per line instead of a table
+  --memory <path>             keep the repeat check in a SQLite file (survives restarts)
+  --log <path>                append every decision to a JSONL log (no prompt text)
+  --name-heuristic            also flag runs of capitalised words as possible names
+  --port <n>                  serve: port (default 8787, bound to 127.0.0.1)
+  --upstream <url>            serve: where allowed requests go (default SIEVE_UPSTREAM)`;
 
 const args = process.argv.slice(2);
 const has = (f: string) => {
@@ -30,6 +39,14 @@ const value = (f: string) => {
   args.splice(i, 2);
   return v;
 };
+const strict = (f: string) => {
+  const i = args.indexOf(f);
+  if (i < 0) return undefined;
+  const v = args[i + 1];
+  if (v === undefined || v.startsWith("--")) fail(`${f} needs a value`);
+  args.splice(i, 2);
+  return v;
+};
 const fail = (msg: string): never => {
   console.error(`sieve: ${msg}`);
   process.exit(1);
@@ -39,11 +56,27 @@ const configPath = value("--config") || "sieve.config.json";
 const useMock = has("--mock");
 const ollamaModel = value("--ollama");
 const json = has("--json");
+const memoryPath = strict("--memory");
+const logPath = strict("--log");
+const nameHeuristic = has("--name-heuristic");
+const port = Number(strict("--port") ?? 8787);
+const upstream = strict("--upstream") ?? process.env.SIEVE_UPSTREAM ?? "";
+const by = strict("--by") ?? "day";
 const [cmd, target] = args;
 
 if (!cmd || cmd === "help" || cmd === "--help" || cmd === "-h") {
   console.log(USAGE);
   process.exit(cmd ? 0 : 1);
+}
+
+if (cmd === "report") {
+  if (!["hour", "day", "week"].includes(by)) fail("--by must be hour, day or week");
+  if (!target) fail("report needs a decision log (.jsonl)");
+  const file = Bun.file(target);
+  if (!(await file.exists())) fail(`no such file: ${target}`);
+  const r = summarize(await file.text(), by as "hour" | "day" | "week");
+  console.log(json ? JSON.stringify(r, null, 2) : render(r, target));
+  process.exit(0);
 }
 
 let config: Partial<Config> = {};
@@ -52,6 +85,9 @@ try {
 } catch (err) {
   fail(`could not read ${configPath}: ${(err as Error).message}`);
 }
+if (memoryPath) config.memory = memoryPath;
+if (logPath) config.log = logPath;
+if (nameHeuristic) config.names = { list: config.names?.list ?? [], heuristic: true };
 
 let local: LocalModel | null = null;
 if (useMock) local = mock();
@@ -60,8 +96,16 @@ const sieve = createSieve({ config, local });
 
 if (cmd === "check") {
   if (!target) fail("check needs a prompt");
-  console.log(JSON.stringify(await sieve(target), null, 2));
+  console.log(JSON.stringify(await sieve(target, undefined, { source: "check" }), null, 2));
   process.exit(0);
+}
+if (cmd === "serve") {
+  if (!upstream) fail("serve needs an upstream: --upstream http://host:port or SIEVE_UPSTREAM");
+  if (!Number.isInteger(port) || port < 1) fail("--port takes a number");
+  const server = serve(sieve, { port, upstream });
+  console.log(`sieve proxy on http://${server.hostname}:${server.port}/v1/chat/completions → ${upstream}`);
+  console.log(`local model: ${local?.name ?? "off"} · repeat memory: ${sieve.config.memory || "in process"} · log: ${sieve.config.log || "off"}`);
+  await new Promise(() => {});
 }
 if (cmd !== "run") fail(`unknown command "${cmd}"\n\n${USAGE}`);
 if (!target) fail("run needs a .jsonl file");
@@ -80,7 +124,7 @@ for (const [n, line] of lines.entries()) {
   const rec: { id?: string | number; prompt?: unknown } = typeof item === "string" ? { prompt: item } : (item ?? {});
   if (typeof rec.prompt !== "string") fail(`line ${n + 1} has no "prompt" string`);
   const id = String(rec.id ?? n + 1);
-  const r = await sieve(rec.prompt as string, `#${id}`);
+  const r = await sieve(rec.prompt as string, `#${id}`, { id, source: "run" });
   rows.push({ id, prompt: rec.prompt as string, r });
   if (json) console.log(JSON.stringify({ id, ...r }));
 }

@@ -8,6 +8,10 @@ export type Config = {
   minWords: number;
   duplicateThreshold: number;
   recentWindow: number;
+  recentTtlSeconds: number;
+  memory: string;
+  names: { list: string[]; heuristic: boolean };
+  log: string;
   rules: Rule[];
   scope: { description: string; keywords: string[] };
   local: { url: string; model: string; timeoutMs: number };
@@ -19,6 +23,10 @@ export const DEFAULTS: Config = {
   minWords: 3,
   duplicateThreshold: 0.75,
   recentWindow: 200,
+  recentTtlSeconds: 0,
+  memory: "",
+  names: { list: [], heuristic: false },
+  log: "",
   rules: [],
   scope: { description: "", keywords: [] },
   local: { url: "http://localhost:11434", model: "llama3.2", timeoutMs: 15000 },
@@ -116,4 +124,27 @@ export function banned(prompt: string, rules: Rule[]): Finding[] {
     );
     return hit ? [{ decision: rule.action ?? "block", reason: `rule "${rule.name}" matched "${hit}"` } as Finding] : [];
   });
+}
+
+const NOT_NAMES = new Set(
+  `I A An The This That These Those My Our Your Their His Her Its We You They He She It Can Could Would Should Will Shall May Might Must
+  Please Thanks Thank Hi Hello Hey Dear Why How What When Where Who Which Is Are Was Were Do Does Did Has Have Had If And But Or So Also
+  Monday Tuesday Wednesday Thursday Friday Saturday Sunday January February March April May June July August September October November December
+  Mr Mrs Ms Dr Prof`.split(/\s+/),
+);
+
+function escape(s: string): string {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+export function names(prompt: string, cfg: Config): Finding[] {
+  const found: Finding[] = [];
+  const listed = cfg.names.list.find((n) => n.trim() && new RegExp(`(?<![\\p{L}\\p{N}])${escape(n.trim())}(?![\\p{L}\\p{N}])`, "iu").test(prompt));
+  if (listed) found.push({ decision: "review", reason: "contains PII: listed name" });
+  if (cfg.names.heuristic) {
+    const runs = prompt.match(/\p{Lu}\p{Ll}+(?:[-'’]\p{Lu}?\p{Ll}+)?(?:\s+\p{Lu}\p{Ll}+(?:[-'’]\p{Lu}?\p{Ll}+)?)+/gu) ?? [];
+    const hit = runs.some((run) => run.split(/\s+/).filter((w) => !NOT_NAMES.has(w.replace(/[-'’].*$/, ""))).length >= 2);
+    if (hit) found.push({ decision: "review", reason: "contains PII: possible name (capitalised words)" });
+  }
+  return found;
 }

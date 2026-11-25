@@ -2,6 +2,9 @@
   "minChars": 12,
   "minWords": 3,
   "duplicateThreshold": 0.75,
+  "recentWindow": 200,
+  "recentTtlSeconds": 86400,
+  "names": { "list": ["Dana Whitfield"], "heuristic": false },
   "rules": [
     { "name": "medical dosing", "match": ["dosage", "overdose", "/how many (mg|milligrams)/i"], "action": "review" },
     { "name": "weapons", "match": ["explosive", "untraceable gun"], "action": "block" },

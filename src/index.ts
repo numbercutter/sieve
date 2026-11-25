@@ -1,12 +1,16 @@
-import { existsSync, readFileSync } from "node:fs";
-import { DEFAULTS, banned, nearDuplicate, pii, secrets, shingles, tooShort, type Config, type Decision, type Finding } from "./checks.ts";
+import { appendFileSync, existsSync, mkdirSync, readFileSync } from "node:fs";
+import { dirname } from "node:path";
+import { DEFAULTS, banned, names, nearDuplicate, pii, secrets, shingles, tooShort, type Config, type Decision, type Finding } from "./checks.ts";
 import type { LocalModel } from "./local.ts";
+import { inMemory, sqliteMemory, type RepeatMemory } from "./memory.ts";
 
 export { DEFAULTS, type Config, type Decision, type Rule } from "./checks.ts";
 export { ollama, mock, type LocalModel } from "./local.ts";
+export { inMemory, sqliteMemory, type RepeatMemory } from "./memory.ts";
 
 export type Result = { decision: Decision; reasons: string[]; costSavedEstimate: number };
-export type SieveOptions = { config?: Partial<Config>; local?: LocalModel | null };
+export type LogEntry = { at: string; id?: string; source?: string; decision: Decision; reasons: string[]; chars: number; costSavedEstimate: number };
+export type SieveOptions = { config?: Partial<Config>; local?: LocalModel | null; memory?: RepeatMemory; clock?: () => number };
 
 export function loadConfig(path = "sieve.config.json"): Partial<Config> {
   return existsSync(path) ? JSON.parse(readFileSync(path, "utf8")) : {};
@@ -19,6 +23,7 @@ function merge(partial: Partial<Config>): Config {
     scope: { ...DEFAULTS.scope, ...partial.scope },
     local: { ...DEFAULTS.local, ...partial.local },
     pricing: { ...DEFAULTS.pricing, ...partial.pricing },
+    names: { ...DEFAULTS.names, ...partial.names },
   };
 }
 
@@ -31,25 +36,26 @@ export function estimateCost(prompt: string, cfg: Config): number {
 export function createSieve(opts: SieveOptions = {}) {
   const cfg = merge(opts.config ?? {});
   const local = opts.local ?? null;
-  const recent: { label: string; sh: Set<string> }[] = [];
+  const clock = opts.clock ?? Date.now;
+  const memory = opts.memory ?? (cfg.memory ? sqliteMemory(cfg.memory, cfg.recentWindow, cfg.recentTtlSeconds) : inMemory(cfg.recentWindow, cfg.recentTtlSeconds));
+  if (cfg.log) mkdirSync(dirname(cfg.log), { recursive: true });
   let seen = 0;
 
-  async function sieve(prompt: string, label?: string): Promise<Result> {
+  async function sieve(prompt: string, label?: string, meta: { id?: string; source?: string } = {}): Promise<Result> {
+    const now = clock();
     const findings: Finding[] = [];
     const short = tooShort(prompt, cfg);
     if (short) findings.push(short);
     const sh = shingles(prompt);
     if (!short) {
-      const dup = nearDuplicate(sh, recent, cfg);
+      const dup = nearDuplicate(sh, memory.recent(now), cfg);
       if (dup) findings.push(dup);
     }
-    findings.push(...secrets(prompt), ...pii(prompt), ...banned(prompt, cfg.rules));
+    const sensitive = [...secrets(prompt), ...pii(prompt), ...names(prompt, cfg)];
+    findings.push(...sensitive, ...banned(prompt, cfg.rules));
 
     seen++;
-    if (!short) {
-      recent.push({ label: label ?? `prompt ${seen}`, sh });
-      if (recent.length > cfg.recentWindow) recent.shift();
-    }
+    if (!short && !sensitive.length) memory.add(label ?? `prompt ${seen}`, sh, now);
 
     if (!findings.some((f) => f.decision === "block") && local) {
       try {
@@ -64,14 +70,19 @@ export function createSieve(opts: SieveOptions = {}) {
       : findings.some((f) => f.decision === "review")
         ? "review"
         : "forward";
-    return {
+    const result: Result = {
       decision,
       reasons: findings.length ? findings.map((f) => f.reason) : ["passed all checks"],
       costSavedEstimate: decision === "block" ? estimateCost(prompt, cfg) : 0,
     };
+    if (cfg.log) {
+      const entry: LogEntry = { at: new Date(now).toISOString(), ...meta, ...result, chars: prompt.length };
+      appendFileSync(cfg.log, JSON.stringify(entry) + "\n");
+    }
+    return result;
   }
 
-  return Object.assign(sieve, { config: cfg });
+  return Object.assign(sieve, { config: cfg, close: () => memory.close?.() });
 }
 
 let defaultSieve: ReturnType<typeof createSieve> | undefined;

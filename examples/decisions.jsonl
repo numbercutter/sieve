@@ -1,0 +1,328 @@
+{"at":"2025-06-02T10:59:33.532Z","id":"0-0","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":95}
+{"at":"2025-06-02T17:52:15.308Z","id":"0-1","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":81}
+{"at":"2025-06-02T13:17:31.305Z","id":"0-2","source":"serve","decision":"review","reasons":["contains PII: phone number"],"costSavedEstimate":0,"chars":75}
+{"at":"2025-06-02T17:09:11.757Z","id":"0-3","source":"serve","decision":"block","reasons":["too short (1 word, 2 chars)"],"costSavedEstimate":0.007503,"chars":2}
+{"at":"2025-06-02T17:58:25.432Z","id":"0-4","source":"serve","decision":"block","reasons":["contains secret: GitHub token"],"costSavedEstimate":0.00759,"chars":118}
+{"at":"2025-06-02T09:56:00.766Z","id":"0-5","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":71}
+{"at":"2025-06-02T08:35:25.227Z","id":"0-6","source":"serve","decision":"block","reasons":["near-duplicate of req 0-1 (0.79)"],"costSavedEstimate":0.007569,"chars":90}
+{"at":"2025-06-02T08:18:09.127Z","id":"0-7","source":"serve","decision":"block","reasons":["too short (1 word, 2 chars)"],"costSavedEstimate":0.007503,"chars":2}
+{"at":"2025-06-02T14:44:12.633Z","id":"0-8","source":"serve","decision":"review","reasons":["contains PII: listed name"],"costSavedEstimate":0,"chars":82}
+{"at":"2025-06-02T16:05:44.835Z","id":"0-9","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":83}
+{"at":"2025-06-02T08:38:13.666Z","id":"0-10","source":"serve","decision":"block","reasons":["empty prompt"],"costSavedEstimate":0.007503,"chars":3}
+{"at":"2025-06-02T12:57:34.508Z","id":"0-11","source":"serve","decision":"block","reasons":["contains secret: GitHub token"],"costSavedEstimate":0.00759,"chars":118}
+{"at":"2025-06-02T16:55:23.483Z","id":"0-12","source":"serve","decision":"block","reasons":["too short (1 word, 2 chars)"],"costSavedEstimate":0.007503,"chars":2}
+{"at":"2025-06-02T16:01:38.374Z","id":"0-13","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":75}
+{"at":"2025-06-02T08:16:19.397Z","id":"0-14","source":"serve","decision":"block","reasons":["near-duplicate of req 0-1 (1.00)"],"costSavedEstimate":0.007563,"chars":81}
+{"at":"2025-06-02T15:23:16.364Z","id":"0-15","source":"serve","decision":"review","reasons":["contains PII: phone number"],"costSavedEstimate":0,"chars":75}
+{"at":"2025-06-02T16:10:34.338Z","id":"0-16","source":"serve","decision":"review","reasons":["contains PII: phone number"],"costSavedEstimate":0,"chars":75}
+{"at":"2025-06-02T15:25:30.259Z","id":"0-17","source":"serve","decision":"block","reasons":["near-duplicate of req 0-13 (0.82)"],"costSavedEstimate":0.007557,"chars":75}
+{"at":"2025-06-02T11:23:24.343Z","id":"0-18","source":"serve","decision":"block","reasons":["near-duplicate of req 0-13 (1.00)"],"costSavedEstimate":0.007557,"chars":75}
+{"at":"2025-06-02T14:35:18.766Z","id":"0-19","source":"serve","decision":"block","reasons":["near-duplicate of req 0-1 (0.79)"],"costSavedEstimate":0.007569,"chars":90}
+{"at":"2025-06-02T10:59:38.823Z","id":"0-20","source":"serve","decision":"block","reasons":["mock: off-topic"],"costSavedEstimate":0.00753,"chars":38}
+{"at":"2025-06-02T11:07:44.007Z","id":"0-21","source":"serve","decision":"review","reasons":["contains PII: phone number"],"costSavedEstimate":0,"chars":75}
+{"at":"2025-06-02T13:34:51.110Z","id":"0-22","source":"serve","decision":"block","reasons":["contains secret: GitHub token"],"costSavedEstimate":0.00759,"chars":118}
+{"at":"2025-06-02T12:37:12.203Z","id":"0-23","source":"serve","decision":"block","reasons":["contains secret: OpenAI key"],"costSavedEstimate":0.007569,"chars":89}
+{"at":"2025-06-02T12:09:04.285Z","id":"0-24","source":"serve","decision":"block","reasons":["mock: off-topic"],"costSavedEstimate":0.007551,"chars":68}
+{"at":"2025-06-02T16:24:09.579Z","id":"0-25","source":"serve","decision":"block","reasons":["contains secret: OpenAI key"],"costSavedEstimate":0.007569,"chars":89}
+{"at":"2025-06-02T11:31:57.563Z","id":"0-26","source":"serve","decision":"block","reasons":["near-duplicate of req 0-1 (1.00)"],"costSavedEstimate":0.007563,"chars":81}
+{"at":"2025-06-02T13:52:07.288Z","id":"0-27","source":"serve","decision":"review","reasons":["contains PII: payment card number"],"costSavedEstimate":0,"chars":83}
+{"at":"2025-06-02T13:44:14.292Z","id":"0-28","source":"serve","decision":"review","reasons":["contains PII: email address"],"costSavedEstimate":0,"chars":88}
+{"at":"2025-06-02T08:51:44.973Z","id":"0-29","source":"serve","decision":"block","reasons":["contains secret: OpenAI key"],"costSavedEstimate":0.007569,"chars":89}
+{"at":"2025-06-02T13:15:02.406Z","id":"0-30","source":"serve","decision":"review","reasons":["rule \"medical dosing\" matched \"dosage\""],"costSavedEstimate":0,"chars":82}
+{"at":"2025-06-02T10:57:00.088Z","id":"0-31","source":"serve","decision":"block","reasons":["near-duplicate of req 0-30 (1.00)","rule \"medical dosing\" matched \"dosage\""],"costSavedEstimate":0.007563,"chars":82}
+{"at":"2025-06-02T08:47:47.311Z","id":"0-32","source":"serve","decision":"block","reasons":["near-duplicate of req 0-9 (1.00)"],"costSavedEstimate":0.007563,"chars":83}
+{"at":"2025-06-02T10:01:24.755Z","id":"0-33","source":"serve","decision":"block","reasons":["near-duplicate of req 0-13 (1.00)"],"costSavedEstimate":0.007557,"chars":75}
+{"at":"2025-06-02T16:30:06.341Z","id":"0-34","source":"serve","decision":"block","reasons":["contains secret: OpenAI key"],"costSavedEstimate":0.007569,"chars":89}
+{"at":"2025-06-02T14:10:32.482Z","id":"0-35","source":"serve","decision":"review","reasons":["contains PII: listed name"],"costSavedEstimate":0,"chars":82}
+{"at":"2025-06-02T10:29:12.896Z","id":"0-36","source":"serve","decision":"block","reasons":["near-duplicate of req 0-30 (1.00)","rule \"medical dosing\" matched \"dosage\""],"costSavedEstimate":0.007563,"chars":82}
+{"at":"2025-06-02T11:56:06.595Z","id":"0-37","source":"serve","decision":"block","reasons":["empty prompt"],"costSavedEstimate":0.007503,"chars":3}
+{"at":"2025-06-02T14:48:07.838Z","id":"0-38","source":"serve","decision":"review","reasons":["contains PII: email address"],"costSavedEstimate":0,"chars":88}
+{"at":"2025-06-02T09:55:13.697Z","id":"0-39","source":"serve","decision":"block","reasons":["empty prompt"],"costSavedEstimate":0.007503,"chars":3}
+{"at":"2025-06-02T08:00:13.003Z","id":"0-40","source":"serve","decision":"block","reasons":["near-duplicate of req 0-24 (1.00)"],"costSavedEstimate":0.007551,"chars":68}
+{"at":"2025-06-02T15:46:09.940Z","id":"0-41","source":"serve","decision":"block","reasons":["near-duplicate of req 0-9 (1.00)"],"costSavedEstimate":0.007563,"chars":83}
+{"at":"2025-06-02T12:19:15.378Z","id":"0-42","source":"serve","decision":"block","reasons":["near-duplicate of req 0-19 (1.00)"],"costSavedEstimate":0.007569,"chars":90}
+{"at":"2025-06-02T13:05:34.027Z","id":"0-43","source":"serve","decision":"review","reasons":["contains PII: email address"],"costSavedEstimate":0,"chars":88}
+{"at":"2025-06-02T10:55:25.700Z","id":"0-44","source":"serve","decision":"review","reasons":["contains PII: phone number"],"costSavedEstimate":0,"chars":75}
+{"at":"2025-06-02T10:49:38.738Z","id":"0-45","source":"serve","decision":"block","reasons":["contains secret: OpenAI key"],"costSavedEstimate":0.007569,"chars":89}
+{"at":"2025-06-02T08:35:18.824Z","id":"0-46","source":"serve","decision":"review","reasons":["contains PII: phone number"],"costSavedEstimate":0,"chars":75}
+{"at":"2025-06-03T12:29:05.718Z","id":"1-0","source":"serve","decision":"block","reasons":["contains secret: GitHub token"],"costSavedEstimate":0.00759,"chars":118}
+{"at":"2025-06-03T16:16:29.125Z","id":"1-1","source":"serve","decision":"block","reasons":["mock: off-topic"],"costSavedEstimate":0.007551,"chars":68}
+{"at":"2025-06-03T10:12:51.130Z","id":"1-2","source":"serve","decision":"review","reasons":["rule \"medical dosing\" matched \"dosage\""],"costSavedEstimate":0,"chars":82}
+{"at":"2025-06-03T15:44:51.793Z","id":"1-3","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":90}
+{"at":"2025-06-03T08:00:37.709Z","id":"1-4","source":"serve","decision":"review","reasons":["contains PII: payment card number"],"costSavedEstimate":0,"chars":83}
+{"at":"2025-06-03T09:05:00.290Z","id":"1-5","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":71}
+{"at":"2025-06-03T10:46:36.425Z","id":"1-6","source":"serve","decision":"block","reasons":["contains secret: OpenAI key"],"costSavedEstimate":0.007569,"chars":89}
+{"at":"2025-06-03T13:55:44.615Z","id":"1-7","source":"serve","decision":"review","reasons":["contains PII: listed name"],"costSavedEstimate":0,"chars":82}
+{"at":"2025-06-03T15:12:39.285Z","id":"1-8","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":71}
+{"at":"2025-06-03T10:34:01.802Z","id":"1-9","source":"serve","decision":"review","reasons":["contains PII: email address"],"costSavedEstimate":0,"chars":88}
+{"at":"2025-06-03T12:57:15.721Z","id":"1-10","source":"serve","decision":"review","reasons":["contains PII: payment card number"],"costSavedEstimate":0,"chars":83}
+{"at":"2025-06-03T15:51:43.901Z","id":"1-11","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":95}
+{"at":"2025-06-03T17:26:23.798Z","id":"1-12","source":"serve","decision":"block","reasons":["mock: off-topic"],"costSavedEstimate":0.00753,"chars":38}
+{"at":"2025-06-03T13:02:24.500Z","id":"1-13","source":"serve","decision":"review","reasons":["contains PII: listed name"],"costSavedEstimate":0,"chars":82}
+{"at":"2025-06-03T11:53:44.043Z","id":"1-14","source":"serve","decision":"block","reasons":["contains secret: OpenAI key"],"costSavedEstimate":0.007569,"chars":89}
+{"at":"2025-06-03T16:53:11.324Z","id":"1-15","source":"serve","decision":"review","reasons":["rule \"medical dosing\" matched \"dosage\""],"costSavedEstimate":0,"chars":82}
+{"at":"2025-06-03T11:22:35.475Z","id":"1-16","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":83}
+{"at":"2025-06-03T16:59:10.234Z","id":"1-17","source":"serve","decision":"review","reasons":["contains PII: phone number"],"costSavedEstimate":0,"chars":75}
+{"at":"2025-06-03T09:48:13.327Z","id":"1-18","source":"serve","decision":"review","reasons":["contains PII: email address"],"costSavedEstimate":0,"chars":88}
+{"at":"2025-06-03T11:24:24.252Z","id":"1-19","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":75}
+{"at":"2025-06-03T09:21:44.443Z","id":"1-20","source":"serve","decision":"block","reasons":["empty prompt"],"costSavedEstimate":0.007503,"chars":3}
+{"at":"2025-06-03T16:09:16.327Z","id":"1-21","source":"serve","decision":"review","reasons":["contains PII: email address"],"costSavedEstimate":0,"chars":88}
+{"at":"2025-06-03T13:31:28.173Z","id":"1-22","source":"serve","decision":"block","reasons":["near-duplicate of req 1-1 (1.00)"],"costSavedEstimate":0.007551,"chars":68}
+{"at":"2025-06-03T09:51:22.464Z","id":"1-23","source":"serve","decision":"block","reasons":["contains secret: OpenAI key"],"costSavedEstimate":0.007569,"chars":89}
+{"at":"2025-06-03T14:25:41.163Z","id":"1-24","source":"serve","decision":"review","reasons":["contains PII: listed name"],"costSavedEstimate":0,"chars":82}
+{"at":"2025-06-03T17:07:05.818Z","id":"1-25","source":"serve","decision":"review","reasons":["contains PII: email address"],"costSavedEstimate":0,"chars":88}
+{"at":"2025-06-03T14:48:43.106Z","id":"1-26","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":75}
+{"at":"2025-06-03T16:14:00.745Z","id":"1-27","source":"serve","decision":"block","reasons":["near-duplicate of req 1-3 (1.00)"],"costSavedEstimate":0.007569,"chars":90}
+{"at":"2025-06-03T11:07:08.409Z","id":"1-28","source":"serve","decision":"block","reasons":["near-duplicate of req 1-3 (0.79)"],"costSavedEstimate":0.007563,"chars":81}
+{"at":"2025-06-03T09:06:29.277Z","id":"1-29","source":"serve","decision":"review","reasons":["contains PII: phone number"],"costSavedEstimate":0,"chars":75}
+{"at":"2025-06-03T11:33:06.729Z","id":"1-30","source":"serve","decision":"review","reasons":["contains PII: email address"],"costSavedEstimate":0,"chars":88}
+{"at":"2025-06-03T14:07:08.703Z","id":"1-31","source":"serve","decision":"block","reasons":["near-duplicate of req 1-15 (1.00)","rule \"medical dosing\" matched \"dosage\""],"costSavedEstimate":0.007563,"chars":82}
+{"at":"2025-06-03T13:33:34.085Z","id":"1-32","source":"serve","decision":"review","reasons":["contains PII: listed name"],"costSavedEstimate":0,"chars":82}
+{"at":"2025-06-03T12:29:42.329Z","id":"1-33","source":"serve","decision":"block","reasons":["near-duplicate of req 1-8 (1.00)"],"costSavedEstimate":0.007554,"chars":71}
+{"at":"2025-06-03T08:44:36.012Z","id":"1-34","source":"serve","decision":"block","reasons":["contains secret: OpenAI key"],"costSavedEstimate":0.007569,"chars":89}
+{"at":"2025-06-03T14:30:09.251Z","id":"1-35","source":"serve","decision":"block","reasons":["near-duplicate of req 1-26 (1.00)"],"costSavedEstimate":0.007557,"chars":75}
+{"at":"2025-06-03T14:04:43.492Z","id":"1-36","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":83}
+{"at":"2025-06-03T13:51:20.351Z","id":"1-37","source":"serve","decision":"block","reasons":["near-duplicate of req 1-26 (0.82)"],"costSavedEstimate":0.007557,"chars":75}
+{"at":"2025-06-03T16:57:18.411Z","id":"1-38","source":"serve","decision":"block","reasons":["near-duplicate of req 1-15 (1.00)","rule \"medical dosing\" matched \"dosage\""],"costSavedEstimate":0.007563,"chars":82}
+{"at":"2025-06-03T12:20:09.293Z","id":"1-39","source":"serve","decision":"block","reasons":["near-duplicate of req 1-12 (1.00)"],"costSavedEstimate":0.00753,"chars":38}
+{"at":"2025-06-03T15:33:29.654Z","id":"1-40","source":"serve","decision":"block","reasons":["near-duplicate of req 1-26 (1.00)"],"costSavedEstimate":0.007557,"chars":75}
+{"at":"2025-06-03T16:59:34.499Z","id":"1-41","source":"serve","decision":"block","reasons":["near-duplicate of req 1-1 (1.00)"],"costSavedEstimate":0.007551,"chars":68}
+{"at":"2025-06-03T08:58:22.870Z","id":"1-42","source":"serve","decision":"block","reasons":["contains secret: GitHub token"],"costSavedEstimate":0.00759,"chars":118}
+{"at":"2025-06-03T08:38:19.710Z","id":"1-43","source":"serve","decision":"block","reasons":["near-duplicate of req 1-16 (1.00)"],"costSavedEstimate":0.007563,"chars":83}
+{"at":"2025-06-03T15:39:33.791Z","id":"1-44","source":"serve","decision":"block","reasons":["contains secret: OpenAI key"],"costSavedEstimate":0.007569,"chars":89}
+{"at":"2025-06-03T08:07:38.949Z","id":"1-45","source":"serve","decision":"review","reasons":["contains PII: payment card number"],"costSavedEstimate":0,"chars":83}
+{"at":"2025-06-03T16:09:01.319Z","id":"1-46","source":"serve","decision":"review","reasons":["contains PII: payment card number"],"costSavedEstimate":0,"chars":83}
+{"at":"2025-06-03T09:49:54.367Z","id":"1-47","source":"serve","decision":"block","reasons":["contains secret: GitHub token"],"costSavedEstimate":0.00759,"chars":118}
+{"at":"2025-06-03T09:36:09.927Z","id":"1-48","source":"serve","decision":"block","reasons":["contains secret: OpenAI key"],"costSavedEstimate":0.007569,"chars":89}
+{"at":"2025-06-03T13:49:00.396Z","id":"1-49","source":"serve","decision":"block","reasons":["near-duplicate of req 1-1 (1.00)"],"costSavedEstimate":0.007551,"chars":68}
+{"at":"2025-06-04T09:14:06.450Z","id":"2-0","source":"serve","decision":"review","reasons":["contains PII: phone number"],"costSavedEstimate":0,"chars":75}
+{"at":"2025-06-04T09:05:35.633Z","id":"2-1","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":71}
+{"at":"2025-06-04T09:23:55.926Z","id":"2-2","source":"serve","decision":"review","reasons":["contains PII: email address"],"costSavedEstimate":0,"chars":88}
+{"at":"2025-06-04T08:53:50.576Z","id":"2-3","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":81}
+{"at":"2025-06-04T12:22:24.772Z","id":"2-4","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":81}
+{"at":"2025-06-04T08:18:59.342Z","id":"2-5","source":"serve","decision":"block","reasons":["too short (1 word, 2 chars)"],"costSavedEstimate":0.007503,"chars":2}
+{"at":"2025-06-04T08:00:16.451Z","id":"2-6","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":75}
+{"at":"2025-06-04T12:55:44.482Z","id":"2-7","source":"serve","decision":"block","reasons":["too short (1 word, 2 chars)"],"costSavedEstimate":0.007503,"chars":2}
+{"at":"2025-06-04T17:51:56.516Z","id":"2-8","source":"serve","decision":"block","reasons":["mock: off-topic"],"costSavedEstimate":0.007551,"chars":68}
+{"at":"2025-06-04T09:31:39.584Z","id":"2-9","source":"serve","decision":"block","reasons":["contains secret: GitHub token"],"costSavedEstimate":0.00759,"chars":118}
+{"at":"2025-06-04T11:14:03.119Z","id":"2-10","source":"serve","decision":"review","reasons":["rule \"medical dosing\" matched \"dosage\""],"costSavedEstimate":0,"chars":82}
+{"at":"2025-06-04T13:07:58.315Z","id":"2-11","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":71}
+{"at":"2025-06-04T15:05:59.700Z","id":"2-12","source":"serve","decision":"block","reasons":["contains secret: OpenAI key"],"costSavedEstimate":0.007569,"chars":89}
+{"at":"2025-06-04T09:34:40.420Z","id":"2-13","source":"serve","decision":"block","reasons":["near-duplicate of req 2-8 (1.00)"],"costSavedEstimate":0.007551,"chars":68}
+{"at":"2025-06-04T15:56:01.144Z","id":"2-14","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":83}
+{"at":"2025-06-04T12:58:43.529Z","id":"2-15","source":"serve","decision":"block","reasons":["too short (1 word, 2 chars)"],"costSavedEstimate":0.007503,"chars":2}
+{"at":"2025-06-04T15:15:32.136Z","id":"2-16","source":"serve","decision":"block","reasons":["near-duplicate of req 2-14 (1.00)"],"costSavedEstimate":0.007563,"chars":83}
+{"at":"2025-06-04T08:35:36.789Z","id":"2-17","source":"serve","decision":"block","reasons":["near-duplicate of req 2-6 (1.00)"],"costSavedEstimate":0.007557,"chars":75}
+{"at":"2025-06-04T11:11:14.462Z","id":"2-18","source":"serve","decision":"block","reasons":["contains secret: GitHub token"],"costSavedEstimate":0.00759,"chars":118}
+{"at":"2025-06-04T10:36:13.791Z","id":"2-19","source":"serve","decision":"block","reasons":["empty prompt"],"costSavedEstimate":0.007503,"chars":3}
+{"at":"2025-06-04T13:34:05.916Z","id":"2-20","source":"serve","decision":"review","reasons":["contains PII: phone number"],"costSavedEstimate":0,"chars":75}
+{"at":"2025-06-04T13:24:25.185Z","id":"2-21","source":"serve","decision":"review","reasons":["contains PII: phone number"],"costSavedEstimate":0,"chars":75}
+{"at":"2025-06-04T13:04:31.692Z","id":"2-22","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":75}
+{"at":"2025-06-04T14:26:31.268Z","id":"2-23","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":95}
+{"at":"2025-06-04T13:17:30.687Z","id":"2-24","source":"serve","decision":"block","reasons":["near-duplicate of req 2-14 (1.00)"],"costSavedEstimate":0.007563,"chars":83}
+{"at":"2025-06-04T17:52:03.588Z","id":"2-25","source":"serve","decision":"block","reasons":["empty prompt"],"costSavedEstimate":0.007503,"chars":3}
+{"at":"2025-06-04T14:53:23.129Z","id":"2-26","source":"serve","decision":"review","reasons":["contains PII: phone number"],"costSavedEstimate":0,"chars":75}
+{"at":"2025-06-04T11:16:19.935Z","id":"2-27","source":"serve","decision":"review","reasons":["contains PII: listed name"],"costSavedEstimate":0,"chars":82}
+{"at":"2025-06-04T12:59:29.633Z","id":"2-28","source":"serve","decision":"review","reasons":["contains PII: phone number"],"costSavedEstimate":0,"chars":75}
+{"at":"2025-06-04T17:35:12.845Z","id":"2-29","source":"serve","decision":"review","reasons":["contains PII: listed name"],"costSavedEstimate":0,"chars":82}
+{"at":"2025-06-04T16:39:35.199Z","id":"2-30","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":95}
+{"at":"2025-06-04T08:22:27.318Z","id":"2-31","source":"serve","decision":"block","reasons":["near-duplicate of req 2-3 (1.00)"],"costSavedEstimate":0.007563,"chars":81}
+{"at":"2025-06-04T08:49:48.242Z","id":"2-32","source":"serve","decision":"block","reasons":["contains secret: OpenAI key"],"costSavedEstimate":0.007569,"chars":89}
+{"at":"2025-06-04T08:20:59.625Z","id":"2-33","source":"serve","decision":"block","reasons":["near-duplicate of req 2-1 (1.00)"],"costSavedEstimate":0.007554,"chars":71}
+{"at":"2025-06-04T08:07:18.169Z","id":"2-34","source":"serve","decision":"review","reasons":["contains PII: phone number"],"costSavedEstimate":0,"chars":75}
+{"at":"2025-06-04T16:25:19.128Z","id":"2-35","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":75}
+{"at":"2025-06-04T12:22:59.445Z","id":"2-36","source":"serve","decision":"block","reasons":["too short (1 word, 2 chars)"],"costSavedEstimate":0.007503,"chars":2}
+{"at":"2025-06-04T13:09:48.542Z","id":"2-37","source":"serve","decision":"block","reasons":["near-duplicate of req 2-35 (1.00)"],"costSavedEstimate":0.007557,"chars":75}
+{"at":"2025-06-04T11:25:13.971Z","id":"2-38","source":"serve","decision":"block","reasons":["contains secret: GitHub token"],"costSavedEstimate":0.00759,"chars":118}
+{"at":"2025-06-04T12:13:56.707Z","id":"2-39","source":"serve","decision":"block","reasons":["mock: off-topic"],"costSavedEstimate":0.00753,"chars":38}
+{"at":"2025-06-04T15:47:11.036Z","id":"2-40","source":"serve","decision":"review","reasons":["contains PII: listed name"],"costSavedEstimate":0,"chars":82}
+{"at":"2025-06-04T11:37:34.234Z","id":"2-41","source":"serve","decision":"block","reasons":["near-duplicate of req 2-39 (1.00)"],"costSavedEstimate":0.00753,"chars":38}
+{"at":"2025-06-04T13:25:15.327Z","id":"2-42","source":"serve","decision":"block","reasons":["near-duplicate of req 2-23 (1.00)"],"costSavedEstimate":0.007572,"chars":95}
+{"at":"2025-06-04T09:16:36.203Z","id":"2-43","source":"serve","decision":"block","reasons":["contains secret: OpenAI key"],"costSavedEstimate":0.007569,"chars":89}
+{"at":"2025-06-04T13:16:03.174Z","id":"2-44","source":"serve","decision":"block","reasons":["too short (1 word, 2 chars)"],"costSavedEstimate":0.007503,"chars":2}
+{"at":"2025-06-04T10:42:03.399Z","id":"2-45","source":"serve","decision":"block","reasons":["near-duplicate of req 2-35 (1.00)"],"costSavedEstimate":0.007557,"chars":75}
+{"at":"2025-06-04T09:41:23.349Z","id":"2-46","source":"serve","decision":"block","reasons":["near-duplicate of req 2-8 (1.00)"],"costSavedEstimate":0.007551,"chars":68}
+{"at":"2025-06-04T11:03:04.761Z","id":"2-47","source":"serve","decision":"block","reasons":["near-duplicate of req 2-23 (1.00)"],"costSavedEstimate":0.007572,"chars":95}
+{"at":"2025-06-04T17:51:09.270Z","id":"2-48","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":95}
+{"at":"2025-06-05T17:05:05.062Z","id":"3-0","source":"serve","decision":"review","reasons":["contains PII: listed name"],"costSavedEstimate":0,"chars":82}
+{"at":"2025-06-05T17:19:25.979Z","id":"3-1","source":"serve","decision":"block","reasons":["contains secret: OpenAI key"],"costSavedEstimate":0.007569,"chars":89}
+{"at":"2025-06-05T15:25:19.985Z","id":"3-2","source":"serve","decision":"block","reasons":["too short (1 word, 2 chars)"],"costSavedEstimate":0.007503,"chars":2}
+{"at":"2025-06-05T09:31:01.030Z","id":"3-3","source":"serve","decision":"review","reasons":["rule \"medical dosing\" matched \"dosage\""],"costSavedEstimate":0,"chars":82}
+{"at":"2025-06-05T17:18:49.816Z","id":"3-4","source":"serve","decision":"block","reasons":["empty prompt"],"costSavedEstimate":0.007503,"chars":3}
+{"at":"2025-06-05T08:12:08.565Z","id":"3-5","source":"serve","decision":"block","reasons":["contains secret: GitHub token"],"costSavedEstimate":0.00759,"chars":118}
+{"at":"2025-06-05T15:30:40.855Z","id":"3-6","source":"serve","decision":"block","reasons":["mock: off-topic"],"costSavedEstimate":0.00753,"chars":38}
+{"at":"2025-06-05T15:15:09.352Z","id":"3-7","source":"serve","decision":"block","reasons":["near-duplicate of req 3-6 (1.00)"],"costSavedEstimate":0.00753,"chars":38}
+{"at":"2025-06-05T12:05:15.568Z","id":"3-8","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":75}
+{"at":"2025-06-05T10:10:44.857Z","id":"3-9","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":81}
+{"at":"2025-06-05T14:53:55.581Z","id":"3-10","source":"serve","decision":"review","reasons":["rule \"medical dosing\" matched \"dosage\""],"costSavedEstimate":0,"chars":82}
+{"at":"2025-06-05T14:10:23.101Z","id":"3-11","source":"serve","decision":"review","reasons":["contains PII: email address"],"costSavedEstimate":0,"chars":88}
+{"at":"2025-06-05T10:54:54.716Z","id":"3-12","source":"serve","decision":"block","reasons":["near-duplicate of req 3-8 (1.00)"],"costSavedEstimate":0.007557,"chars":75}
+{"at":"2025-06-05T16:46:57.095Z","id":"3-13","source":"serve","decision":"review","reasons":["contains PII: listed name"],"costSavedEstimate":0,"chars":82}
+{"at":"2025-06-05T08:59:06.133Z","id":"3-14","source":"serve","decision":"review","reasons":["contains PII: payment card number"],"costSavedEstimate":0,"chars":83}
+{"at":"2025-06-05T11:20:03.696Z","id":"3-15","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":83}
+{"at":"2025-06-05T16:49:12.582Z","id":"3-16","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":75}
+{"at":"2025-06-05T10:04:31.562Z","id":"3-17","source":"serve","decision":"block","reasons":["too short (1 word, 2 chars)"],"costSavedEstimate":0.007503,"chars":2}
+{"at":"2025-06-05T14:46:04.232Z","id":"3-18","source":"serve","decision":"block","reasons":["mock: off-topic"],"costSavedEstimate":0.007551,"chars":68}
+{"at":"2025-06-05T13:05:25.946Z","id":"3-19","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":71}
+{"at":"2025-06-05T10:28:25.963Z","id":"3-20","source":"serve","decision":"block","reasons":["near-duplicate of req 3-9 (1.00)"],"costSavedEstimate":0.007563,"chars":81}
+{"at":"2025-06-05T17:51:22.852Z","id":"3-21","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":71}
+{"at":"2025-06-05T14:28:49.639Z","id":"3-22","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":81}
+{"at":"2025-06-05T13:49:13.159Z","id":"3-23","source":"serve","decision":"review","reasons":["contains PII: phone number"],"costSavedEstimate":0,"chars":75}
+{"at":"2025-06-05T14:24:31.186Z","id":"3-24","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":95}
+{"at":"2025-06-05T15:55:49.930Z","id":"3-25","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":95}
+{"at":"2025-06-05T09:04:01.541Z","id":"3-26","source":"serve","decision":"block","reasons":["near-duplicate of req 3-18 (1.00)"],"costSavedEstimate":0.007551,"chars":68}
+{"at":"2025-06-05T17:57:45.018Z","id":"3-27","source":"serve","decision":"review","reasons":["contains PII: phone number"],"costSavedEstimate":0,"chars":75}
+{"at":"2025-06-05T17:58:28.161Z","id":"3-28","source":"serve","decision":"block","reasons":["empty prompt"],"costSavedEstimate":0.007503,"chars":3}
+{"at":"2025-06-05T09:28:58.565Z","id":"3-29","source":"serve","decision":"block","reasons":["empty prompt"],"costSavedEstimate":0.007503,"chars":3}
+{"at":"2025-06-05T10:42:27.907Z","id":"3-30","source":"serve","decision":"block","reasons":["near-duplicate of req 3-19 (1.00)"],"costSavedEstimate":0.007554,"chars":71}
+{"at":"2025-06-05T14:20:45.640Z","id":"3-31","source":"serve","decision":"block","reasons":["contains secret: GitHub token"],"costSavedEstimate":0.00759,"chars":118}
+{"at":"2025-06-05T17:29:56.715Z","id":"3-32","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":95}
+{"at":"2025-06-05T09:44:59.127Z","id":"3-33","source":"serve","decision":"block","reasons":["near-duplicate of req 3-15 (1.00)"],"costSavedEstimate":0.007563,"chars":83}
+{"at":"2025-06-05T08:24:22.065Z","id":"3-34","source":"serve","decision":"block","reasons":["near-duplicate of req 3-8 (1.00)"],"costSavedEstimate":0.007557,"chars":75}
+{"at":"2025-06-05T11:35:49.282Z","id":"3-35","source":"serve","decision":"block","reasons":["near-duplicate of req 3-22 (1.00)"],"costSavedEstimate":0.007563,"chars":81}
+{"at":"2025-06-05T16:06:03.989Z","id":"3-36","source":"serve","decision":"block","reasons":["near-duplicate of req 3-16 (1.00)"],"costSavedEstimate":0.007557,"chars":75}
+{"at":"2025-06-05T13:47:14.774Z","id":"3-37","source":"serve","decision":"block","reasons":["contains secret: OpenAI key"],"costSavedEstimate":0.007569,"chars":89}
+{"at":"2025-06-05T13:29:04.993Z","id":"3-38","source":"serve","decision":"block","reasons":["near-duplicate of req 3-16 (1.00)"],"costSavedEstimate":0.007557,"chars":75}
+{"at":"2025-06-05T12:56:43.882Z","id":"3-39","source":"serve","decision":"block","reasons":["near-duplicate of req 3-22 (0.79)"],"costSavedEstimate":0.007569,"chars":90}
+{"at":"2025-06-05T09:32:36.764Z","id":"3-40","source":"serve","decision":"block","reasons":["empty prompt"],"costSavedEstimate":0.007503,"chars":3}
+{"at":"2025-06-05T10:57:57.333Z","id":"3-41","source":"serve","decision":"block","reasons":["near-duplicate of req 3-16 (1.00)"],"costSavedEstimate":0.007557,"chars":75}
+{"at":"2025-06-05T09:04:43.629Z","id":"3-42","source":"serve","decision":"review","reasons":["contains PII: phone number"],"costSavedEstimate":0,"chars":75}
+{"at":"2025-06-05T13:06:35.662Z","id":"3-43","source":"serve","decision":"review","reasons":["contains PII: phone number"],"costSavedEstimate":0,"chars":75}
+{"at":"2025-06-05T16:45:21.303Z","id":"3-44","source":"serve","decision":"review","reasons":["contains PII: listed name"],"costSavedEstimate":0,"chars":82}
+{"at":"2025-06-05T09:56:19.219Z","id":"3-45","source":"serve","decision":"block","reasons":["near-duplicate of req 3-19 (1.00)"],"costSavedEstimate":0.007554,"chars":71}
+{"at":"2025-06-05T09:54:54.465Z","id":"3-46","source":"serve","decision":"block","reasons":["near-duplicate of req 3-3 (1.00)","rule \"medical dosing\" matched \"dosage\""],"costSavedEstimate":0.007563,"chars":82}
+{"at":"2025-06-06T13:56:06.322Z","id":"4-0","source":"serve","decision":"block","reasons":["too short (1 word, 2 chars)"],"costSavedEstimate":0.007503,"chars":2}
+{"at":"2025-06-06T08:52:03.731Z","id":"4-1","source":"serve","decision":"review","reasons":["contains PII: payment card number"],"costSavedEstimate":0,"chars":83}
+{"at":"2025-06-06T09:41:26.629Z","id":"4-2","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":71}
+{"at":"2025-06-06T14:34:40.716Z","id":"4-3","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":81}
+{"at":"2025-06-06T08:35:35.394Z","id":"4-4","source":"serve","decision":"block","reasons":["contains secret: OpenAI key"],"costSavedEstimate":0.007569,"chars":89}
+{"at":"2025-06-06T12:35:28.939Z","id":"4-5","source":"serve","decision":"block","reasons":["contains secret: GitHub token"],"costSavedEstimate":0.00759,"chars":118}
+{"at":"2025-06-06T09:18:20.441Z","id":"4-6","source":"serve","decision":"block","reasons":["empty prompt"],"costSavedEstimate":0.007503,"chars":3}
+{"at":"2025-06-06T08:39:06.233Z","id":"4-7","source":"serve","decision":"block","reasons":["contains secret: OpenAI key"],"costSavedEstimate":0.007569,"chars":89}
+{"at":"2025-06-06T16:33:58.155Z","id":"4-8","source":"serve","decision":"block","reasons":["empty prompt"],"costSavedEstimate":0.007503,"chars":3}
+{"at":"2025-06-06T13:37:43.093Z","id":"4-9","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":75}
+{"at":"2025-06-06T10:15:45.277Z","id":"4-10","source":"serve","decision":"block","reasons":["too short (1 word, 2 chars)"],"costSavedEstimate":0.007503,"chars":2}
+{"at":"2025-06-06T09:03:56.497Z","id":"4-11","source":"serve","decision":"block","reasons":["near-duplicate of req 4-9 (0.82)"],"costSavedEstimate":0.007557,"chars":75}
+{"at":"2025-06-06T08:19:27.409Z","id":"4-12","source":"serve","decision":"block","reasons":["contains secret: OpenAI key"],"costSavedEstimate":0.007569,"chars":89}
+{"at":"2025-06-06T09:06:01.935Z","id":"4-13","source":"serve","decision":"review","reasons":["rule \"medical dosing\" matched \"dosage\""],"costSavedEstimate":0,"chars":82}
+{"at":"2025-06-06T08:22:02.380Z","id":"4-14","source":"serve","decision":"review","reasons":["contains PII: listed name"],"costSavedEstimate":0,"chars":82}
+{"at":"2025-06-06T09:32:02.329Z","id":"4-15","source":"serve","decision":"block","reasons":["near-duplicate of req 4-3 (0.79)"],"costSavedEstimate":0.007569,"chars":90}
+{"at":"2025-06-06T09:06:25.457Z","id":"4-16","source":"serve","decision":"block","reasons":["near-duplicate of req 4-2 (1.00)"],"costSavedEstimate":0.007554,"chars":71}
+{"at":"2025-06-06T15:33:02.072Z","id":"4-17","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":75}
+{"at":"2025-06-06T12:25:10.306Z","id":"4-18","source":"serve","decision":"review","reasons":["contains PII: phone number"],"costSavedEstimate":0,"chars":75}
+{"at":"2025-06-06T09:51:54.440Z","id":"4-19","source":"serve","decision":"block","reasons":["contains secret: GitHub token"],"costSavedEstimate":0.00759,"chars":118}
+{"at":"2025-06-06T17:15:16.784Z","id":"4-20","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":71}
+{"at":"2025-06-06T12:48:15.776Z","id":"4-21","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":83}
+{"at":"2025-06-06T14:04:39.959Z","id":"4-22","source":"serve","decision":"block","reasons":["mock: off-topic"],"costSavedEstimate":0.00753,"chars":38}
+{"at":"2025-06-06T14:40:39.459Z","id":"4-23","source":"serve","decision":"block","reasons":["near-duplicate of req 4-3 (1.00)"],"costSavedEstimate":0.007563,"chars":81}
+{"at":"2025-06-06T11:35:19.784Z","id":"4-24","source":"serve","decision":"block","reasons":["near-duplicate of req 4-22 (1.00)"],"costSavedEstimate":0.00753,"chars":38}
+{"at":"2025-06-06T09:28:19.255Z","id":"4-25","source":"serve","decision":"block","reasons":["near-duplicate of req 4-15 (1.00)"],"costSavedEstimate":0.007569,"chars":90}
+{"at":"2025-06-06T17:49:04.918Z","id":"4-26","source":"serve","decision":"review","reasons":["contains PII: listed name"],"costSavedEstimate":0,"chars":82}
+{"at":"2025-06-06T10:53:09.495Z","id":"4-27","source":"serve","decision":"block","reasons":["near-duplicate of req 4-9 (1.00)"],"costSavedEstimate":0.007557,"chars":75}
+{"at":"2025-06-06T11:11:57.380Z","id":"4-28","source":"serve","decision":"block","reasons":["contains secret: OpenAI key"],"costSavedEstimate":0.007569,"chars":89}
+{"at":"2025-06-06T14:58:50.122Z","id":"4-29","source":"serve","decision":"block","reasons":["near-duplicate of req 4-3 (0.79)"],"costSavedEstimate":0.007569,"chars":90}
+{"at":"2025-06-06T14:43:12.130Z","id":"4-30","source":"serve","decision":"review","reasons":["contains PII: listed name"],"costSavedEstimate":0,"chars":82}
+{"at":"2025-06-06T14:03:22.569Z","id":"4-31","source":"serve","decision":"review","reasons":["contains PII: phone number"],"costSavedEstimate":0,"chars":75}
+{"at":"2025-06-06T14:45:57.680Z","id":"4-32","source":"serve","decision":"review","reasons":["rule \"medical dosing\" matched \"dosage\""],"costSavedEstimate":0,"chars":82}
+{"at":"2025-06-06T09:20:37.687Z","id":"4-33","source":"serve","decision":"review","reasons":["contains PII: listed name"],"costSavedEstimate":0,"chars":82}
+{"at":"2025-06-06T12:01:24.589Z","id":"4-34","source":"serve","decision":"block","reasons":["mock: off-topic"],"costSavedEstimate":0.007551,"chars":68}
+{"at":"2025-06-06T09:16:42.318Z","id":"4-35","source":"serve","decision":"block","reasons":["near-duplicate of req 4-34 (1.00)"],"costSavedEstimate":0.007551,"chars":68}
+{"at":"2025-06-06T15:34:22.766Z","id":"4-36","source":"serve","decision":"review","reasons":["contains PII: listed name"],"costSavedEstimate":0,"chars":82}
+{"at":"2025-06-06T13:55:39.933Z","id":"4-37","source":"serve","decision":"block","reasons":["empty prompt"],"costSavedEstimate":0.007503,"chars":3}
+{"at":"2025-06-06T15:49:54.475Z","id":"4-38","source":"serve","decision":"review","reasons":["contains PII: email address"],"costSavedEstimate":0,"chars":88}
+{"at":"2025-06-07T13:28:54.127Z","id":"5-0","source":"serve","decision":"review","reasons":["contains PII: payment card number"],"costSavedEstimate":0,"chars":83}
+{"at":"2025-06-07T08:00:25.238Z","id":"5-1","source":"serve","decision":"review","reasons":["contains PII: email address"],"costSavedEstimate":0,"chars":88}
+{"at":"2025-06-07T13:05:01.263Z","id":"5-2","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":90}
+{"at":"2025-06-07T14:46:29.210Z","id":"5-3","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":71}
+{"at":"2025-06-07T11:01:10.739Z","id":"5-4","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":75}
+{"at":"2025-06-07T11:57:19.904Z","id":"5-5","source":"serve","decision":"block","reasons":["near-duplicate of req 5-4 (1.00)"],"costSavedEstimate":0.007557,"chars":75}
+{"at":"2025-06-07T10:52:52.957Z","id":"5-6","source":"serve","decision":"block","reasons":["too short (1 word, 2 chars)"],"costSavedEstimate":0.007503,"chars":2}
+{"at":"2025-06-07T09:28:38.113Z","id":"5-7","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":83}
+{"at":"2025-06-07T09:36:41.399Z","id":"5-8","source":"serve","decision":"block","reasons":["near-duplicate of req 5-4 (0.82)"],"costSavedEstimate":0.007557,"chars":75}
+{"at":"2025-06-07T13:59:49.557Z","id":"5-9","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":75}
+{"at":"2025-06-07T14:16:46.353Z","id":"5-10","source":"serve","decision":"block","reasons":["near-duplicate of req 5-3 (1.00)"],"costSavedEstimate":0.007554,"chars":71}
+{"at":"2025-06-07T17:10:20.627Z","id":"5-11","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":83}
+{"at":"2025-06-07T11:41:29.182Z","id":"5-12","source":"serve","decision":"block","reasons":["empty prompt"],"costSavedEstimate":0.007503,"chars":3}
+{"at":"2025-06-07T14:56:27.424Z","id":"5-13","source":"serve","decision":"block","reasons":["empty prompt"],"costSavedEstimate":0.007503,"chars":3}
+{"at":"2025-06-07T14:53:22.854Z","id":"5-14","source":"serve","decision":"block","reasons":["near-duplicate of req 5-11 (1.00)"],"costSavedEstimate":0.007563,"chars":83}
+{"at":"2025-06-07T08:15:22.971Z","id":"5-15","source":"serve","decision":"block","reasons":["near-duplicate of req 5-4 (1.00)"],"costSavedEstimate":0.007557,"chars":75}
+{"at":"2025-06-07T08:16:25.765Z","id":"5-16","source":"serve","decision":"block","reasons":["near-duplicate of req 5-2 (1.00)"],"costSavedEstimate":0.007569,"chars":90}
+{"at":"2025-06-07T10:36:15.702Z","id":"5-17","source":"serve","decision":"block","reasons":["near-duplicate of req 5-3 (1.00)"],"costSavedEstimate":0.007554,"chars":71}
+{"at":"2025-06-07T10:52:17.864Z","id":"5-18","source":"serve","decision":"review","reasons":["contains PII: listed name"],"costSavedEstimate":0,"chars":82}
+{"at":"2025-06-07T16:55:40.266Z","id":"5-19","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":90}
+{"at":"2025-06-07T14:36:48.544Z","id":"5-20","source":"serve","decision":"block","reasons":["contains secret: GitHub token"],"costSavedEstimate":0.00759,"chars":118}
+{"at":"2025-06-07T11:14:19.349Z","id":"5-21","source":"serve","decision":"review","reasons":["contains PII: listed name"],"costSavedEstimate":0,"chars":82}
+{"at":"2025-06-07T15:14:15.587Z","id":"5-22","source":"serve","decision":"block","reasons":["contains secret: OpenAI key"],"costSavedEstimate":0.007569,"chars":89}
+{"at":"2025-06-07T14:14:24.843Z","id":"5-23","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":95}
+{"at":"2025-06-07T11:52:24.534Z","id":"5-24","source":"serve","decision":"block","reasons":["mock: off-topic"],"costSavedEstimate":0.007551,"chars":68}
+{"at":"2025-06-07T11:30:32.354Z","id":"5-25","source":"serve","decision":"block","reasons":["near-duplicate of req 5-3 (1.00)"],"costSavedEstimate":0.007554,"chars":71}
+{"at":"2025-06-07T08:24:46.312Z","id":"5-26","source":"serve","decision":"review","reasons":["contains PII: payment card number"],"costSavedEstimate":0,"chars":83}
+{"at":"2025-06-07T15:39:00.643Z","id":"5-27","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":75}
+{"at":"2025-06-07T17:16:49.094Z","id":"5-28","source":"serve","decision":"block","reasons":["near-duplicate of req 5-11 (1.00)"],"costSavedEstimate":0.007563,"chars":83}
+{"at":"2025-06-07T15:19:04.197Z","id":"5-29","source":"serve","decision":"review","reasons":["contains PII: payment card number"],"costSavedEstimate":0,"chars":83}
+{"at":"2025-06-07T08:43:36.303Z","id":"5-30","source":"serve","decision":"block","reasons":["empty prompt"],"costSavedEstimate":0.007503,"chars":3}
+{"at":"2025-06-07T12:29:04.537Z","id":"5-31","source":"serve","decision":"block","reasons":["near-duplicate of req 5-9 (1.00)"],"costSavedEstimate":0.007557,"chars":75}
+{"at":"2025-06-07T12:50:50.607Z","id":"5-32","source":"serve","decision":"block","reasons":["near-duplicate of req 5-9 (1.00)"],"costSavedEstimate":0.007557,"chars":75}
+{"at":"2025-06-07T10:38:38.817Z","id":"5-33","source":"serve","decision":"review","reasons":["contains PII: phone number"],"costSavedEstimate":0,"chars":75}
+{"at":"2025-06-07T17:13:54.346Z","id":"5-34","source":"serve","decision":"block","reasons":["mock: off-topic"],"costSavedEstimate":0.007551,"chars":68}
+{"at":"2025-06-07T09:37:44.381Z","id":"5-35","source":"serve","decision":"block","reasons":["contains secret: GitHub token"],"costSavedEstimate":0.00759,"chars":118}
+{"at":"2025-06-07T08:41:17.140Z","id":"5-36","source":"serve","decision":"block","reasons":["near-duplicate of req 5-2 (0.79)"],"costSavedEstimate":0.007563,"chars":81}
+{"at":"2025-06-07T13:52:52.606Z","id":"5-37","source":"serve","decision":"block","reasons":["near-duplicate of req 5-2 (0.79)"],"costSavedEstimate":0.007563,"chars":81}
+{"at":"2025-06-07T11:20:53.370Z","id":"5-38","source":"serve","decision":"block","reasons":["near-duplicate of req 5-23 (1.00)"],"costSavedEstimate":0.007572,"chars":95}
+{"at":"2025-06-07T08:21:13.826Z","id":"5-39","source":"serve","decision":"review","reasons":["rule \"medical dosing\" matched \"dosage\""],"costSavedEstimate":0,"chars":82}
+{"at":"2025-06-07T13:34:49.642Z","id":"5-40","source":"serve","decision":"block","reasons":["near-duplicate of req 5-2 (1.00)"],"costSavedEstimate":0.007569,"chars":90}
+{"at":"2025-06-07T08:04:00.300Z","id":"5-41","source":"serve","decision":"block","reasons":["near-duplicate of req 5-7 (1.00)"],"costSavedEstimate":0.007563,"chars":83}
+{"at":"2025-06-07T12:02:17.186Z","id":"5-42","source":"serve","decision":"block","reasons":["near-duplicate of req 5-9 (1.00)"],"costSavedEstimate":0.007557,"chars":75}
+{"at":"2025-06-07T11:48:30.947Z","id":"5-43","source":"serve","decision":"review","reasons":["rule \"medical dosing\" matched \"dosage\""],"costSavedEstimate":0,"chars":82}
+{"at":"2025-06-07T11:15:38.277Z","id":"5-44","source":"serve","decision":"block","reasons":["contains secret: GitHub token"],"costSavedEstimate":0.00759,"chars":118}
+{"at":"2025-06-07T11:21:26.030Z","id":"5-45","source":"serve","decision":"block","reasons":["near-duplicate of req 5-2 (1.00)"],"costSavedEstimate":0.007569,"chars":90}
+{"at":"2025-06-07T15:19:09.334Z","id":"5-46","source":"serve","decision":"review","reasons":["contains PII: phone number"],"costSavedEstimate":0,"chars":75}
+{"at":"2025-06-07T14:39:47.960Z","id":"5-47","source":"serve","decision":"review","reasons":["rule \"medical dosing\" matched \"dosage\""],"costSavedEstimate":0,"chars":82}
+{"at":"2025-06-07T11:07:19.013Z","id":"5-48","source":"serve","decision":"review","reasons":["contains PII: listed name"],"costSavedEstimate":0,"chars":82}
+{"at":"2025-06-07T09:08:27.376Z","id":"5-49","source":"serve","decision":"block","reasons":["near-duplicate of req 5-8 (1.00)"],"costSavedEstimate":0.007557,"chars":75}
+{"at":"2025-06-07T15:39:09.159Z","id":"5-50","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":95}
+{"at":"2025-06-07T14:52:07.881Z","id":"5-51","source":"serve","decision":"block","reasons":["near-duplicate of req 5-27 (1.00)"],"costSavedEstimate":0.007557,"chars":75}
+{"at":"2025-06-07T10:20:36.050Z","id":"5-52","source":"serve","decision":"block","reasons":["near-duplicate of req 5-37 (1.00)"],"costSavedEstimate":0.007563,"chars":81}
+{"at":"2025-06-07T11:04:38.639Z","id":"5-53","source":"serve","decision":"block","reasons":["near-duplicate of req 5-11 (1.00)"],"costSavedEstimate":0.007563,"chars":83}
+{"at":"2025-06-07T14:07:13.175Z","id":"5-54","source":"serve","decision":"block","reasons":["mock: off-topic"],"costSavedEstimate":0.00753,"chars":38}
+{"at":"2025-06-07T10:28:24.032Z","id":"5-55","source":"serve","decision":"block","reasons":["near-duplicate of req 5-23 (1.00)"],"costSavedEstimate":0.007572,"chars":95}
+{"at":"2025-06-08T17:12:12.216Z","id":"6-0","source":"serve","decision":"block","reasons":["mock: off-topic"],"costSavedEstimate":0.00753,"chars":38}
+{"at":"2025-06-08T14:46:35.133Z","id":"6-1","source":"serve","decision":"review","reasons":["contains PII: listed name"],"costSavedEstimate":0,"chars":82}
+{"at":"2025-06-08T11:40:24.028Z","id":"6-2","source":"serve","decision":"block","reasons":["empty prompt"],"costSavedEstimate":0.007503,"chars":3}
+{"at":"2025-06-08T12:20:36.969Z","id":"6-3","source":"serve","decision":"block","reasons":["too short (1 word, 2 chars)"],"costSavedEstimate":0.007503,"chars":2}
+{"at":"2025-06-08T09:36:20.929Z","id":"6-4","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":75}
+{"at":"2025-06-08T12:05:14.486Z","id":"6-5","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":83}
+{"at":"2025-06-08T14:37:35.940Z","id":"6-6","source":"serve","decision":"block","reasons":["mock: off-topic"],"costSavedEstimate":0.007551,"chars":68}
+{"at":"2025-06-08T17:16:54.217Z","id":"6-7","source":"serve","decision":"block","reasons":["near-duplicate of req 6-0 (1.00)"],"costSavedEstimate":0.00753,"chars":38}
+{"at":"2025-06-08T16:04:10.894Z","id":"6-8","source":"serve","decision":"review","reasons":["contains PII: email address"],"costSavedEstimate":0,"chars":88}
+{"at":"2025-06-08T11:49:07.660Z","id":"6-9","source":"serve","decision":"block","reasons":["contains secret: OpenAI key"],"costSavedEstimate":0.007569,"chars":89}
+{"at":"2025-06-08T14:18:26.907Z","id":"6-10","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":75}
+{"at":"2025-06-08T15:35:04.858Z","id":"6-11","source":"serve","decision":"review","reasons":["contains PII: payment card number"],"costSavedEstimate":0,"chars":83}
+{"at":"2025-06-08T10:46:15.736Z","id":"6-12","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":95}
+{"at":"2025-06-08T10:58:17.366Z","id":"6-13","source":"serve","decision":"block","reasons":["near-duplicate of req 6-10 (0.82)"],"costSavedEstimate":0.007557,"chars":75}
+{"at":"2025-06-08T08:25:13.449Z","id":"6-14","source":"serve","decision":"block","reasons":["near-duplicate of req 6-6 (1.00)"],"costSavedEstimate":0.007551,"chars":68}
+{"at":"2025-06-08T12:14:55.305Z","id":"6-15","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":90}
+{"at":"2025-06-08T09:40:47.924Z","id":"6-16","source":"serve","decision":"block","reasons":["too short (1 word, 2 chars)"],"costSavedEstimate":0.007503,"chars":2}
+{"at":"2025-06-08T12:51:49.477Z","id":"6-17","source":"serve","decision":"block","reasons":["near-duplicate of req 6-10 (0.82)"],"costSavedEstimate":0.007557,"chars":75}
+{"at":"2025-06-08T11:12:06.599Z","id":"6-18","source":"serve","decision":"review","reasons":["contains PII: payment card number"],"costSavedEstimate":0,"chars":83}
+{"at":"2025-06-08T11:49:26.980Z","id":"6-19","source":"serve","decision":"review","reasons":["contains PII: payment card number"],"costSavedEstimate":0,"chars":83}
+{"at":"2025-06-08T14:53:21.476Z","id":"6-20","source":"serve","decision":"review","reasons":["contains PII: payment card number"],"costSavedEstimate":0,"chars":83}
+{"at":"2025-06-08T10:28:26.011Z","id":"6-21","source":"serve","decision":"block","reasons":["near-duplicate of req 6-5 (1.00)"],"costSavedEstimate":0.007563,"chars":83}
+{"at":"2025-06-08T17:35:36.393Z","id":"6-22","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":83}
+{"at":"2025-06-08T10:03:47.731Z","id":"6-23","source":"serve","decision":"block","reasons":["near-duplicate of req 6-12 (1.00)"],"costSavedEstimate":0.007572,"chars":95}
+{"at":"2025-06-08T12:03:04.719Z","id":"6-24","source":"serve","decision":"review","reasons":["contains PII: phone number"],"costSavedEstimate":0,"chars":75}
+{"at":"2025-06-08T14:21:34.297Z","id":"6-25","source":"serve","decision":"block","reasons":["near-duplicate of req 6-0 (1.00)"],"costSavedEstimate":0.00753,"chars":38}
+{"at":"2025-06-08T08:20:00.762Z","id":"6-26","source":"serve","decision":"block","reasons":["contains secret: GitHub token"],"costSavedEstimate":0.00759,"chars":118}
+{"at":"2025-06-08T08:40:05.050Z","id":"6-27","source":"serve","decision":"block","reasons":["too short (1 word, 2 chars)"],"costSavedEstimate":0.007503,"chars":2}
+{"at":"2025-06-08T12:38:03.807Z","id":"6-28","source":"serve","decision":"block","reasons":["empty prompt"],"costSavedEstimate":0.007503,"chars":3}
+{"at":"2025-06-08T15:53:58.938Z","id":"6-29","source":"serve","decision":"block","reasons":["near-duplicate of req 6-0 (1.00)"],"costSavedEstimate":0.00753,"chars":38}
+{"at":"2025-06-08T11:45:03.059Z","id":"6-30","source":"serve","decision":"block","reasons":["near-duplicate of req 6-12 (1.00)"],"costSavedEstimate":0.007572,"chars":95}
+{"at":"2025-06-08T12:54:11.806Z","id":"6-31","source":"serve","decision":"block","reasons":["empty prompt"],"costSavedEstimate":0.007503,"chars":3}
+{"at":"2025-06-08T08:32:31.828Z","id":"6-32","source":"serve","decision":"block","reasons":["contains secret: GitHub token"],"costSavedEstimate":0.00759,"chars":118}
+{"at":"2025-06-08T08:32:49.833Z","id":"6-33","source":"serve","decision":"block","reasons":["near-duplicate of req 6-13 (1.00)"],"costSavedEstimate":0.007557,"chars":75}
+{"at":"2025-06-08T15:32:43.473Z","id":"6-34","source":"serve","decision":"review","reasons":["rule \"medical dosing\" matched \"dosage\""],"costSavedEstimate":0,"chars":82}
+{"at":"2025-06-08T16:00:15.267Z","id":"6-35","source":"serve","decision":"forward","reasons":["passed all checks"],"costSavedEstimate":0,"chars":81}
+{"at":"2025-06-08T13:09:57.433Z","id":"6-36","source":"serve","decision":"review","reasons":["contains PII: email address"],"costSavedEstimate":0,"chars":88}
+{"at":"2025-06-08T08:30:18.563Z","id":"6-37","source":"serve","decision":"block","reasons":["near-duplicate of req 6-5 (1.00)"],"costSavedEstimate":0.007563,"chars":83}
+{"at":"2025-06-08T10:43:44.416Z","id":"6-38","source":"serve","decision":"block","reasons":["near-duplicate of req 6-15 (1.00)"],"costSavedEstimate":0.007569,"chars":90}
+{"at":"2025-06-08T10:03:58.701Z","id":"6-39","source":"serve","decision":"block","reasons":["near-duplicate of req 6-34 (1.00)","rule \"medical dosing\" matched \"dosage\""],"costSavedEstimate":0.007563,"chars":82}

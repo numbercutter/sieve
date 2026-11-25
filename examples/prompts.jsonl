@@ -14,3 +14,5 @@
 {"id": "14", "prompt": "Can I give a guest read-only access to one board but not the rest of the workspace?"}
 {"id": "15", "prompt": "Who won the football match last night?"}
 {"id": "16", "prompt": "Call me at (415) 555-0142 about the account password reset, I'm locked out."}
+{"id": "17", "prompt": "Please move all of Dana Whitfield's open tasks to the backlog board before Friday."}
+{"id": "18", "prompt": "Does the Google Calendar integration sync due dates from shared boards?"}
